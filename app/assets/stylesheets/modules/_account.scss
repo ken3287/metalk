@@ -37,6 +37,10 @@
     border-bottom: 2px solid $colorwhite;
     outline: none;
   }
+  .field-checkbox {
+    display: inline-block;
+    text-align: center;
+  }
 }
 
 .actions {
