@@ -1,0 +1,85 @@
+.account-page {
+  background-color: #colorgray;
+  height: 100%;
+  .account-page__login {
+    background-color: $colorwhite;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid $border;
+  }
+  .account-page__main {
+    width: 640px;
+    height: 90%;
+    margin: 20px auto;
+    background-color: $colorwhite;
+    border: 1px solid $border;
+    border-radius: 10px;
+    .account-page__main-name {
+      font-size :32px;
+      text-align: center;
+      padding-top: 30px;
+    }
+  }
+}
+
+.field {
+  text-align: center;
+  padding-left: 168px;
+  height: 60px;
+  .field-input {
+    height: 30px;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #1b2538;
+    margin: 20px 0;
+  }
+  .field-input:focus {
+    border-bottom: 2px solid $colorwhite;
+    outline: none;
+  }
+  .field-checkbox {
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.actions {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.account-submit {
+  display: inline-block;
+  text-decoration: none;
+  transition: .3s;
+  border-radius:2px;
+  height: 40px;
+  width: 150px;
+}
+
+.account-submit:hover {
+  color: white;
+  background-color: black;
+}
+
+.account-page__btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid $border;
+  border-radius: 2px;
+  float: right;
+  position: relative;
+  right: 50px;
+  height: 32px;
+  width: 148px;
+  margin-top: 6px;
+  color: black;
+  transition: .3s;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.account-page__btn:hover {
+  color: white;
+  background-color: black
+}

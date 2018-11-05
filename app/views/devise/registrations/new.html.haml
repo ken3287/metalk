@@ -1,0 +1,21 @@
+.account-page
+  .account-page__login
+    = render "devise/shared/links"
+  .account-page__main
+    %h2.account-page__main-name アカウント作成
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .field
+        .field-input
+          = f.text_field :name, autofocus: true, placeholder: 'ユーザーネーム', class: 'field-input', type: 'text'
+      .field
+        .field-input
+          = f.email_field :email, placeholder: 'メールアドレス', class: 'field-input', type: 'text'
+      .field
+        .field-input
+          = f.password_field :password, autocomplete: "off", placeholder: 'パスワード', class: 'field-input', type: 'password'
+      .field
+        .field-input
+          = f.password_field :password_confirmation, autocomplete: "off", placeholder: 'パスワード確認', class: 'field-input',type: 'password'
+      .actions
+        = f.submit "サインアップ", class: 'account-submit'
