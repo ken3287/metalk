@@ -4,6 +4,27 @@
     width: 100%;
     background-color: #FFFFFF;
     border-bottom: 1px solid $border;
+    position: fixed;
+    &__search {
+      display: inline-block;
+      height: 30px;
+      width: 150px;
+      background-color: red;
+      float: right;
+      position: relative;
+      right: 600px;
+      margin-top: 10px;
+    }
+    &__signout {
+      display: inline-block;
+      height: 30px;
+      width: 150px;
+      background-color: blue;
+      float: right;
+      position: relative;
+      right: 350 - 75px;
+      margin-top: 10px;
+    }
   }
   &-main {
     height: 1800px;
