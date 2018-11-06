@@ -1,2 +1,16 @@
-.div
-  = link_to 'ログアウト', destroy_user_session_path, method: :delete
+.home
+  .home-up
+    .home-up__search
+    .home-up__signout
+      = link_to 'ログアウト', destroy_user_session_path, method: :delete
+
+  .home-main
+    .home-main__user
+      .home-main__user-image
+      .home-main__user-info
+      .home-main__user-left
+      .home-main__user-right
+    .home-main__mid
+      .home-main__mid-left
+      .home-main__mid-mid
+      .home-main__mid-right
