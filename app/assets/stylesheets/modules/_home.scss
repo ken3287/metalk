@@ -1,1 +1,13 @@
-
+.home {
+  &-up {
+    height: 50px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid $border;
+  }
+  &-main {
+    height: 1800px;
+    width: 100%;
+    background-color: #FFFFFF;
+  }
+}
