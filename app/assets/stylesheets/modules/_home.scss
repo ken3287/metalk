@@ -2,7 +2,7 @@
   &-up {
     height: 50px;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: $colorwhite;
     border-bottom: 1px solid $border;
     position: fixed;
     &__search {
@@ -12,7 +12,7 @@
       background-color: red;
       float: right;
       position: relative;
-      right: 600px;
+      right: 600 - 30px;
       margin-top: 10px;
     }
     &__signout {
@@ -22,13 +22,63 @@
       background-color: blue;
       float: right;
       position: relative;
-      right: 350 - 75px;
+      right: 350 - 105px;
       margin-top: 10px;
     }
   }
+
   &-main {
-    height: 1800px;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: $colorgray;
+    padding-top: 50px;
+    &__user {
+      height: 340px;
+      width: 72%;
+      background-color: $colorwhite;
+      margin: 0 auto;
+      &-image {
+        height: 60%;
+        width: 30%;
+        background-color: red;
+        float: left;
+      }
+      &-info {
+        height: 60%;
+        width: 70%;
+        background-color: blue;
+        float: left;
+      }
+      &-bottom {
+        height: 40%;
+        width: 100%;
+        background-color: green;
+        clear: both;
+      }
+    }
+
+    &__mid {
+      height: 500px;
+      width: 100%;
+      background-color: blue;
+      border-top: 1px solid $border;
+      &-left {
+        height: 100%;
+        width: 27.7%;
+        background-color: white;
+        float: left;
+      }
+      &-mid {
+        height: 100%;
+        width: 44.4%;
+        background-color: yellow;
+        float: left;
+      }
+      &-right {
+        height: 100%;
+        width: 27.9%;
+        background-color: green;
+        float: right;
+      }
+    }
   }
 }
