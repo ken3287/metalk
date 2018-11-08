@@ -30,6 +30,7 @@
   }
 
   &-main {
+    height: 100%;
     width: 100%;
     background-color: $colorgray;
     &__user {
@@ -77,7 +78,7 @@
         width: 70%;
         float: right;
         overflow: hidden;
-        &_main {
+        &_box {
           width: 50px;
           float: left;
           padding-left: 10px;
@@ -88,9 +89,10 @@
     }
 
     &__mid {
-      height: 500px;
+      height: 455px;
       width: 100%;
-      border-top: 1px solid $border;
+      border-top: $border-line;
+      padding: 30px 0 15px 0;
       &-left {
         height: 100%;
         width: 27.7%;
@@ -102,9 +104,7 @@
         width: 44.3%;
         float: left;
         background-color: $colorwhite;
-        border-left: $border-line;
-        border-right: $border-line;
-        border-bottom: $border-line;
+        border: $border-line;
         overflow: scroll;
         &_post {
           height: 200px;
