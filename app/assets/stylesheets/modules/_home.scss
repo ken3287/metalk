@@ -36,10 +36,9 @@
       height: 340px;
       width: 72%;
       background-color: $colorgray;
-      padding-top: 20px;
       margin: 0 auto;
       &-image {
-        height: 60%;
+        height: 100%;
         width: 30%;
         float: left;
         &_box {
@@ -74,8 +73,8 @@
       }
       &-bottom {
         height: 40%;
-        width: 100%;
-        clear: both;
+        width: 70%;
+        float: right;
       }
     }
 
