@@ -9,21 +9,23 @@
       display: inline-block;
       height: 30px;
       width: 150px;
-      background-color: red;
       float: right;
       position: relative;
       right: 600 - 30px;
       margin-top: 10px;
+      border: 1px solid $border;
+      border-radius: 2px;
     }
     &__signout {
       display: inline-block;
       height: 30px;
       width: 150px;
-      background-color: blue;
       float: right;
       position: relative;
       right: 350 - 105px;
       margin-top: 10px;
+      border: 1px solid $border;
+      border-radius: 2px;
     }
   }
 
@@ -54,6 +56,21 @@
         height: 60%;
         width: 70%;
         float: left;
+        &_name {
+          height: 50px;
+          width: 300px;
+          margin-top: 110px;
+        }
+        &_username {
+          height: 30px;
+          width: 250px;
+          float: left;
+        }
+        &_btn {
+          height: 50px;
+          width: 200px;
+          float: right;
+        }
       }
       &-bottom {
         height: 40%;
