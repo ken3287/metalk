@@ -5,7 +5,6 @@
       = link_to 'ログアウト', destroy_user_session_path, method: :delete
 
   .home-main
-
     .home-main__user
       .home-main__user-image
         .home-main__user-image_box
@@ -45,12 +44,22 @@
     .home-main__mid
       .home-main__mid-left
       .home-main__mid-mid
+        .home-main__mid-mid_menu
         .home-main__mid-mid_post
-          a
-        .home-main__mid-mid_post
-          a
-        .home-main__mid-mid_post
-          a
-        .home-main__mid-mid_post
-          a
+          .post-box#post-box
+            .post-box__up
+              .post-box__up-image
+              .post-box__up-name
+                ken
+            .post-box__bottom
+              .post-box__bottom-image
+                %img
+            .post-box__up
+              .post-box__up-image
+              .post-box__up-name
+                ken
+            .post-box__bottom
+              .post-box__bottom-image
+                %img
+
       .home-main__mid-right

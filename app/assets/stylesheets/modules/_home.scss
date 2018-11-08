@@ -89,7 +89,7 @@
     }
 
     &__mid {
-      height: 455px;
+      height: 460px;
       width: 100%;
       border-top: $border-line;
       padding: 30px 0 15px 0;
@@ -106,9 +106,15 @@
         background-color: $colorwhite;
         border: $border-line;
         overflow: scroll;
+        border-radius: 5px;
+        &_menu {
+          height: 40px;
+          border-bottom: $border-line;
+        }
         &_post {
-          height: 200px;
+          height: 415px;
           width: 100%;
+          overflow: scroll;
         }
       }
       &-right {
@@ -121,10 +127,44 @@
   }
 }
 
+.post-box {
+  &__up {
+    height: 50px;
+    width: 100%;
+    border-bottom: $border-line;
+    &-image {
+      height: 47px;
+      width: 47px;
+      background-color: red;
+      border-radius: 50%;
+      margin-top: 1.5px;
+      margin-left: 10px;
+      float: left;
+    }
+    &-name {
+      clear: fixed;
+      margin-left: 80px;
+    }
+  }
+  &__bottom {
+    max-height: 379px;
+    &-image {
+      height: 370px;
+      width: 100%;
+      background-color: blue;
+    }
+  }
+}
+
 #info-num {
   text-align: center;
 }
 
 #info-text {
 text-align: center;
+}
+
+#post-box {
+  width: 100%;
+  max-height: 420px;
 }
