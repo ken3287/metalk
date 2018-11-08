@@ -3,7 +3,7 @@
     height: 50px;
     width: 100%;
     background-color: $colorwhite;
-    border-bottom: 1px solid $border;
+    border-bottom: $border-line;
     position: fixed;
     &__search {
       display: inline-block;
@@ -13,7 +13,7 @@
       position: relative;
       right: 600 - 30px;
       margin-top: 10px;
-      border: 1px solid $border;
+      border: $border-line;
       border-radius: 2px;
     }
     &__signout {
@@ -24,7 +24,7 @@
       position: relative;
       right: 350 - 105px;
       margin-top: 10px;
-      border: 1px solid $border;
+      border: $border-line;
       border-radius: 2px;
     }
   }
@@ -45,7 +45,7 @@
           height: 220px;
           width: 220px;
           border-radius: 50%;
-          border: 1px solid $border;
+          border: $border-line;
           background-color: white;
           margin: auto;
           margin-top: 110px;
@@ -93,9 +93,9 @@
         width: 44.3%;
         float: left;
         background-color: $colorwhite;
-        border-left: 1px solid $border;
-        border-right: 1px solid $border;
-        border-bottom: 1px solid $border;
+        border-left: $border-line;
+        border-right: $border-line;
+        border-bottom: $border-line;
         overflow: scroll;
         &_post {
           height: 200px;
