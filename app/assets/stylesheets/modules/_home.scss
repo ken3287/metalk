@@ -52,7 +52,7 @@
         }
       }
       &-info {
-        height: 60%;
+        height: 70%;
         width: 70%;
         float: left;
         &_name {
@@ -64,6 +64,7 @@
           height: 30px;
           width: 250px;
           float: left;
+          padding-left: 15px;
         }
         &_btn {
           height: 50px;
@@ -72,9 +73,17 @@
         }
       }
       &-bottom {
-        height: 40%;
+        height: 30%;
         width: 70%;
         float: right;
+        overflow: hidden;
+        &_main {
+          width: 50px;
+          float: left;
+          padding-left: 10px;
+          padding-right: 40px;
+          margin-top: 18px;
+        }
       }
     }
 
@@ -110,4 +119,12 @@
       }
     }
   }
+}
+
+#info-num {
+  text-align: center;
+}
+
+#info-text {
+text-align: center;
 }
