@@ -30,28 +30,34 @@
   &-main {
     width: 100%;
     background-color: $colorgray;
-    padding-top: 50px;
     &__user {
       height: 340px;
       width: 72%;
-      background-color: $colorwhite;
+      background-color: $colorgray;
+      padding-top: 20px;
       margin: 0 auto;
       &-image {
         height: 60%;
         width: 30%;
-        background-color: red;
         float: left;
+        &_box {
+          height: 220px;
+          width: 220px;
+          border-radius: 50%;
+          border: 1px solid $border;
+          background-color: white;
+          margin: auto;
+          margin-top: 110px;
+        }
       }
       &-info {
         height: 60%;
         width: 70%;
-        background-color: blue;
         float: left;
       }
       &-bottom {
         height: 40%;
         width: 100%;
-        background-color: green;
         clear: both;
       }
     }
@@ -59,24 +65,31 @@
     &__mid {
       height: 500px;
       width: 100%;
-      background-color: blue;
       border-top: 1px solid $border;
       &-left {
         height: 100%;
         width: 27.7%;
-        background-color: white;
+        background-color: $colorgray;
         float: left;
       }
       &-mid {
         height: 100%;
-        width: 44.4%;
-        background-color: yellow;
+        width: 44.3%;
         float: left;
+        background-color: $colorwhite;
+        border-left: 1px solid $border;
+        border-right: 1px solid $border;
+        border-bottom: 1px solid $border;
+        overflow: scroll;
+        &_post {
+          height: 200px;
+          width: 100%;
+        }
       }
       &-right {
         height: 100%;
-        width: 27.9%;
-        background-color: green;
+        width: 27.6%;
+        background-color: $colorgray;
         float: right;
       }
     }
