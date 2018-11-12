@@ -1,8 +1,8 @@
 .home
-  .home-up
-    .home-up__search
-    .home-up__signout
-      = link_to 'ログアウト', destroy_user_session_path, method: :delete
+  .home__up
+    .home__up_search
+    .home__up_signout
+      = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "home__up_signout__text"
 
   .home-main
     .home-main__user
@@ -10,13 +10,13 @@
         .home-main__user-image_box
       .home-main__user-info
         .home-main__user-info_name
-          %span.name
+          %span.up__name
             NAME
         .home-main__user-info_username
-          %span.username
+          %span.up__username
             USERNAME
         .home-main__user-info_btn
-          %span.follow
+          %span.up__btn
             FOLLOW
       .home-main__user-bottom
         %ul
@@ -55,6 +55,7 @@
               .post-box__up-date
                 %span.post-box__up-date_text
                   2018-11-11
+              .post-box__up-menu
             .post-box__bottom
               .post-box__bottom-image
             .post-box__up
