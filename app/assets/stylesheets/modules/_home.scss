@@ -82,6 +82,7 @@
           width: 250px;
           float: left;
           padding-left: 15px;
+          display: none;
         }
         &_btn {
           float: right;
@@ -90,6 +91,7 @@
           width: 150px;
           border: $border-line;
           border-radius: 2px;
+          display: none;
         }
       }
       &-bottom {
