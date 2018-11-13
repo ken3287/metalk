@@ -13,7 +13,7 @@
 
 ### Asociation
 
-- has_many :tweets
+- has_many :posts
 - has_many :comments
 - has_many :members
 - has_many :groups, through: :members
@@ -25,7 +25,7 @@
 - has_many :followers
 
 
-## tweets table
+## posts table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -34,7 +34,7 @@
 ### Asociation
 
 - has_many :comments
-- has_many :tweet_images
+- has_many :post_images
 - has_many :favorites
 - has_many :tags
 - belongs_to :user
@@ -47,22 +47,22 @@
 |user_id|references|null: false, foreign_key: true|
 |tweet_id|references|null: false, foreign_key: true|
 
-###Asociation
+### Asociation
 
 - belongs_to :user
-- belongs_to :tweet
+- belongs_to :post
 
 
-## tweet_images table
+## post_images table
 
 |Column|Type|Options|
 |------|----|-------|
 |content|text||
-|tweet_id|references|null: false, foreign_key: true|
+|post_id|references|null: false, foreign_key: true|
 
-###Asociation
+### Asociation
 
-- belongs_to :tweet
+- belongs_to :post
 
 ## favorites table
 
@@ -72,9 +72,9 @@
 |tweet_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 
-###Asociation
+### Asociation
 
-- belongs_to :tweet
+- belongs_to :post
 - belongs_to :user
 
 
@@ -83,12 +83,12 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null :false|
-|tweet_id|references|null: false, foreign_key: true|
+|post_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 
-###Asociation
+### Asociation
 
-- belongs_to :tweet
+- belongs_to :post
 - belongs_to :user
 
 ## dairies table
@@ -98,7 +98,7 @@
 |title|string|null :false|
 |sentence|text|null :false|
 
-###Asociation
+### Asociation
 
 -belongs_to :user
 
@@ -110,7 +110,7 @@
 |content|text||
 |dairy_id|references|null: false, foreign_key: true|
 
-###Asociation
+### Asociation
 
 -belongs_to :dairy
 
@@ -121,7 +121,7 @@
 |------|----|-------|
 |name|string|null :false|
 
-###Asociation
+### Asociation
 
 - has_many :messages
 - has_many :members
@@ -136,7 +136,7 @@
 |user_id|references|null :false, foreign_key :true|
 |group_id|references|null :false, foreign_key :true|
 
-###Asociation
+### Asociation
 
 - belongs_to :user
 - belongs_to :group
@@ -148,7 +148,7 @@
 |user_id|references|null :false, foreign_key :true|
 |group_id|references|null :false, foreign_key :true|
 
-###Asociation
+### Asociation
 
 - belongs_to :user
 - belongs_to :group
@@ -160,7 +160,7 @@
 |status|integer|null :false|
 |user_id|references|null :false, foreign_key: true|
 
-###Asociation
+### Asociation
 
 - belongs_to :user
 - has_many :follower, through: :relations
@@ -172,7 +172,7 @@
 |status|integer|null :false|
 |user_id|references|null :false, foreign_key: true|
 
-###Asociation
+### Asociation
 
 - belongs_to :user
 - has_many :follow, through: :relations
