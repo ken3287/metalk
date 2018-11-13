@@ -1,0 +1,232 @@
+.home {
+  &__up {
+    height: 50px;
+    width: 100%;
+    background-color: $colorwhite;
+    border-bottom: $border-line;
+    position: fixed;
+    &_search {
+      display: inline-block;
+      height: 30px;
+      width: 150px;
+      float: right;
+      position: relative;
+      right: 600 - 30px;
+      margin-top: 10px;
+      border: $border-line;
+      border-radius: 2px;
+      display: none;
+    }
+    &_signout {
+      display: inline-block;
+      height: 30px;
+      width: 150px;
+      float: right;
+      position: relative;
+      right: 350 - 105px;
+      margin-top: 10px;
+      border: $border-line;
+      border-radius: 2px;
+      &__text {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin-top: 3.5px;
+        text-decoration: none;
+        transition: .3s;
+        color: black;
+      }
+      &__text:hover {
+        color: white;
+      }
+    }
+    &_signout:hover {
+      background-color: black;
+    }
+  }
+
+  &-main {
+    height: 100%;
+    width: 100%;
+    background-color: $colorgray;
+    &__user {
+      height: 340px;
+      width: 72%;
+      background-color: $colorgray;
+      margin: 0 auto;
+      &-image {
+        height: 100%;
+        width: 30%;
+        float: left;
+        &_box {
+          height: 220px;
+          width: 220px;
+          border-radius: 50%;
+          border: $border-line;
+          background-color: white;
+          margin: auto;
+          margin-top: 110px;
+        }
+      }
+      &-info {
+        height: 70%;
+        width: 70%;
+        float: left;
+        &_name {
+          height: 50px;
+          width: 300px;
+          margin-top: 110px;
+        }
+        &_username {
+          height: 30px;
+          width: 250px;
+          float: left;
+          padding-left: 15px;
+        }
+        &_btn {
+          float: right;
+          display: inline-block;
+          height: 40px;
+          width: 150px;
+          border: $border-line;
+          border-radius: 2px;
+        }
+      }
+      &-bottom {
+        height: 30%;
+        width: 70%;
+        float: right;
+        overflow: hidden;
+        &_box {
+          width: 50px;
+          float: left;
+          padding-left: 10px;
+          padding-right: 40px;
+          margin-top: 18px;
+        }
+      }
+    }
+
+    &__mid {
+      height: 460px;
+      width: 100%;
+      border-top: $border-line;
+      padding: 30px 0 15px 0;
+      &-left {
+        height: 100%;
+        width: 27.7%;
+        background-color: $colorgray;
+        float: left;
+      }
+      &-mid {
+        height: 100%;
+        width: 44.3%;
+        float: left;
+        background-color: $colorwhite;
+        border: $border-line;
+        overflow: scroll;
+        border-radius: 5px;
+        &_menu {
+          height: 40px;
+          border-bottom: $border-line;
+        }
+        &_post {
+          height: 415px;
+          width: 100%;
+          overflow: scroll;
+        }
+      }
+      &-right {
+        height: 100%;
+        width: 27.6%;
+        background-color: $colorgray;
+        float: right;
+      }
+    }
+  }
+}
+
+.post-box {
+  &__up {
+    height: 52px;
+    width: 100%;
+    border-bottom: $border-line;
+    &-image {
+      height: 47px;
+      width: 47px;
+      border-radius: 50%;
+      margin-top: 1.5px;
+      margin-left: 10px;
+      float: left;
+      border: $border-line;
+    }
+    &-name {
+      height: 52px;
+      float: left;
+      position: relative;
+      left: 10px;
+      &_text {
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        font-size: 25px;
+      }
+    }
+    &-date {
+      height: 52px;
+      width: 160px;
+      float: left;
+      position: relative;
+      left: 100px;
+      &_text {
+        position: absolute;
+        bottom: 0%;
+      }
+    }
+    &-menu {
+      float: left;
+      position: relative;
+      left: 100px;
+      height: 43px;
+      width: 43px;
+      margin-top: 3.5px;
+    }
+  }
+  &__bottom {
+    max-height: 378px;
+    &-image {
+      height: 364px;
+      width: 100%;
+      max-height: 364px;
+      border-bottom: $border-line;
+    }
+  }
+}
+
+.up {
+  &__name {
+    font-size: 25px;
+  }
+  &__username {
+    font-size: 16px;
+  }
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+  }
+}
+
+#info-num {
+  text-align: center;
+}
+
+#info-text {
+text-align: center;
+}
+
+#post-box {
+  width: 100%;
+  max-height: 420px;
+}
