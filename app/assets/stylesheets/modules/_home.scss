@@ -35,12 +35,39 @@
         text-decoration: none;
         transition: .3s;
         color: black;
+        //後々変更
       }
       &__text:hover {
         color: white;
       }
     }
     &_signout:hover {
+      background-color: black;
+    }
+    &_post {
+      width: 150px;
+      float: right;
+      position: relative;
+      left: 100px;
+      margin-top: 10px;
+      transition: .3s;
+      &__link {
+        display: inline-block;
+        height: 30px;
+        width: 100%;
+        text-decoration: none;
+        color: black;
+        border: $border-line;
+        border-radius: 2px;
+        text-align: center;
+        line-height: 30px;
+        transition: .3s;
+      }
+      &__link:hover {
+        color: white;
+      }
+    }
+    &_post:hover {
       background-color: black;
     }
   }
@@ -75,7 +102,7 @@
         &_name {
           height: 50px;
           width: 300px;
-          margin-top: 110px;
+          margin-top: 130px;
         }
         &_username {
           height: 30px;
@@ -211,7 +238,7 @@
 
 .up {
   &__name {
-    font-size: 25px;
+    font-size: 30px;
   }
   &__username {
     font-size: 16px;
