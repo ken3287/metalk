@@ -1,5 +1,33 @@
 .post {
+  height: 100%;
   width: 100%;
   position: relative;
   top: 50px;
+  &-main {
+    height: 400px;
+    width: 600px;
+    border: $border-line;
+    position: relative;
+    left: (840px / 2);
+    top: 50px;
+    border-radius: 5px;
+    &__text {
+      height: 250px;
+      width: 500px;
+      position: relative;
+      left: 50px;
+      top: 30px;
+      border: $border-line;
+      border-radius: 2px;
+    }
+    &__send {
+      height: 40px;
+      width: 150px;
+      position: relative;
+      left: 400px;
+      top: 60px;
+      border-radius: 2px;
+      border: $border-line;
+    }
+  }
 }
