@@ -1,1 +1,10 @@
-
+.home
+  .home__up
+    .home__up_search
+    .home__up_signout
+      = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "home__up_signout__text"
+  .post
+    .post-main
+      = form_for @post, url: user_posts_path(current_user.id) do |f|
+        = f.text_area :body, class: 'post-main__text', maxlength: "180"
+        = f.submit '送信', class: 'post-main__submit'

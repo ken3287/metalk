@@ -4,7 +4,7 @@
   position: relative;
   top: 50px;
   &-main {
-    height: 400px;
+    height: 270px;
     width: 600px;
     border: $border-line;
     position: relative;
@@ -12,21 +12,25 @@
     top: 50px;
     border-radius: 5px;
     &__text {
-      height: 250px;
+      text-decoration: none;
+      height: 150px;
       width: 500px;
       position: relative;
       left: 50px;
       top: 30px;
       border: $border-line;
-      border-radius: 2px;
+      border-radius: 5px;
+      font-size: 18px;
+      resize: none;
     }
-    &__send {
-      height: 40px;
+    &__submit {
+      display: inline-block;
+      height: 30px;
       width: 150px;
       position: relative;
       left: 400px;
-      top: 60px;
-      border-radius: 2px;
+      top: 50px;
+      border-radius: 5px;
       border: $border-line;
     }
   }
