@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   end
 
   def create
+    Post.create(post_params)
+    binding.pry
     redirect_to root_path
   end
 
@@ -17,6 +19,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
+    params.require(:post).permit(:body).merge(user_id: params[:user_id])
   end
 
 end
