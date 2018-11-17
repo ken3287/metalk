@@ -157,6 +157,20 @@
           float: left;
           border: 3px solid $border;
           border-radius: 4px;
+          &-top {
+            height: 45px;
+            widows: 100%;
+            border-bottom: 1.5px solid $border;
+          }
+          &-mid {
+            height: 158px;
+            width: 100%;
+          }
+          &-bottom {
+            height: 45px;
+            width: 100%;
+            border-top: 1.5px solid $border;
+          }
         }
         &_menu {
           height: 280px;
@@ -167,6 +181,7 @@
           float: left;
           border: 3px solid $border;
           border-radius: 3px;
+          display: none;
         }
       }
       &-box {
@@ -182,6 +197,7 @@
           position: relative;
           top: 10px;
           left:147px;
+          display: none;
         }
         &_image {
           height: 450px;
@@ -191,7 +207,21 @@
           border-radius: 4px;
           position: relative;
           top: 10px;
-          left: 183px;
+          left: 469px;
+          &-top {
+            height: 45px;
+            widows: 100%;
+            border-bottom: 1.5px solid $border;
+          }
+          &-mid {
+            height: 357px;
+            width: 100%;
+          }
+          &-bottom {
+            height: 45px;
+            width: 100%;
+            border-top: 1.5px solid $border;
+          }
         }
         &_menu {
           height: 280px;
@@ -202,6 +232,7 @@
           position: relative;
           top: 10px;
           left: 224px;
+          display: none;
         }
       }
     }
