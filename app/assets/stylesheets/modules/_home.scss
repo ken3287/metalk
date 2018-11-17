@@ -4,7 +4,6 @@
     width: 100%;
     background-color: $colorwhite;
     border-bottom: $border-line;
-    position: fixed;
     &_search {
       display: inline-block;
       height: 30px;
@@ -73,11 +72,10 @@
   }
 
   &-main {
-    height: 100%;
     width: 100%;
     background-color: $colorgray;
     &__user {
-      height: 340px;
+      height: 235px;
       width: 72%;
       background-color: $colorgray;
       margin: 0 auto;
@@ -92,7 +90,8 @@
           border: $border-line;
           background-color: white;
           margin: auto;
-          margin-top: 110px;
+          position: relative;
+          top: 5px;
         }
       }
       &-info {
@@ -102,7 +101,9 @@
         &_name {
           height: 50px;
           width: 300px;
-          margin-top: 130px;
+          position: relative;
+          left: 12px;
+          top: 12px;
         }
         &_username {
           height: 30px;
@@ -131,7 +132,6 @@
           float: left;
           padding-left: 10px;
           padding-right: 40px;
-          margin-top: 18px;
           &-color {
             text-decoration: none;
             color: black;
@@ -144,15 +144,12 @@
       height: 460px;
       width: 100%;
       border-top: $border-line;
-      padding: 30px 0 15px 0;
       &-left {
-        height: 100%;
         width: 27.7%;
         background-color: $colorgray;
         float: left;
       }
       &-mid {
-        height: 100%;
         width: 44.3%;
         float: left;
         background-color: $colorwhite;
@@ -164,7 +161,6 @@
           border-bottom: $border-line;
         }
         &_post {
-          height: 415px;
           width: 100%;
           overflow: scroll;
         }
@@ -226,11 +222,8 @@
     }
   }
   &__bottom {
-    max-height: 378px;
     &-image {
-      height: 364px;
       width: 100%;
-      max-height: 364px;
       border-bottom: $border-line;
     }
   }
@@ -256,7 +249,7 @@
 }
 
 #info-text {
-text-align: center;
+  text-align: center;
 }
 
 #post-box {
