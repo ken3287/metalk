@@ -149,8 +149,24 @@
         width: 100%;
         border-bottom: $border-line;
         &_text {
+          height: 250px;
+          width: 500px;
+          position: relative;
+          left: 469px;
+          top: 9px;
+          float: left;
+          border: 3px solid $border;
+          border-radius: 4px;
         }
         &_menu {
+          height: 280px;
+          width: 280px;
+          position: relative;
+          left: 510px;
+          top: 9px;
+          float: left;
+          border: 3px solid $border;
+          border-radius: 3px;
         }
       }
       &-box {
@@ -158,10 +174,34 @@
         width: 100%;
         border-bottom: $border-line;
         &_text {
+          height: 300px;
+          width: 280px;
+          float: left;
+          border: 3px solid $border;
+          border-radius: 3px;
+          position: relative;
+          top: 10px;
+          left:147px;
         }
         &_image {
+          height: 450px;
+          width: 500px;
+          float: left;
+          border: 3px solid $border;
+          border-radius: 4px;
+          position: relative;
+          top: 10px;
+          left: 183px;
         }
         &_menu {
+          height: 280px;
+          width: 280px;
+          border: 3px solid $border;
+          border-radius: 3px;
+          float: left;
+          position: relative;
+          top: 10px;
+          left: 224px;
         }
       }
     }
