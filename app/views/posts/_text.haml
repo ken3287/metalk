@@ -1,0 +1,14 @@
+- current_user.posts.each do |post|
+  .home-main__post-text
+    .home-main__post-text_text
+      .home-main__post-text_text-top
+        .post__image
+        .post__username
+          %span.post__username_text
+            = current_user.name
+        .post__time
+          %span.post__time_text
+            = post.created_at
+      .home-main__post-text_text-mid
+      .home-main__post-text_text-bottom
+    .home-main__post-text_menu

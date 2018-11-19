@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
 
   def index
+    @posts = current_user.posts.includes(:user)
+    binding.pry
   end
 
   def new
