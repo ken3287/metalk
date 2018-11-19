@@ -2,7 +2,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = current_user.posts.includes(:user)
-    binding.pry
   end
 
   def new
@@ -11,7 +10,6 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
-    binding.pry
     redirect_to root_path
   end
 
