@@ -4,7 +4,6 @@
     width: 100%;
     background-color: $colorwhite;
     border-bottom: $border-line;
-    position: fixed;
     &_search {
       display: inline-block;
       height: 30px;
@@ -35,6 +34,7 @@
         text-decoration: none;
         transition: .3s;
         color: black;
+        //後々変更
       }
       &__text:hover {
         color: white;
@@ -43,14 +43,39 @@
     &_signout:hover {
       background-color: black;
     }
+    &_post {
+      width: 150px;
+      float: right;
+      position: relative;
+      left: 100px;
+      margin-top: 10px;
+      transition: .3s;
+      &__link {
+        display: inline-block;
+        height: 30px;
+        width: 100%;
+        text-decoration: none;
+        color: black;
+        border: $border-line;
+        border-radius: 2px;
+        text-align: center;
+        line-height: 30px;
+        transition: .3s;
+      }
+      &__link:hover {
+        color: white;
+      }
+    }
+    &_post:hover {
+      background-color: black;
+    }
   }
 
   &-main {
-    height: 100%;
     width: 100%;
     background-color: $colorgray;
     &__user {
-      height: 340px;
+      height: 238px;
       width: 72%;
       background-color: $colorgray;
       margin: 0 auto;
@@ -65,7 +90,10 @@
           border: $border-line;
           background-color: white;
           margin: auto;
-          margin-top: 110px;
+          position: relative;
+          top: 5px;
+          display: none;
+          //アイコン追加語
         }
       }
       &-info {
@@ -75,13 +103,16 @@
         &_name {
           height: 50px;
           width: 300px;
-          margin-top: 110px;
+          position: relative;
+          left: 12px;
+          top: 12px;
         }
         &_username {
           height: 30px;
           width: 250px;
           float: left;
           padding-left: 15px;
+          display: none;
         }
         &_btn {
           float: right;
@@ -90,6 +121,7 @@
           width: 150px;
           border: $border-line;
           border-radius: 2px;
+          display: none;
         }
       }
       &-bottom {
@@ -102,110 +134,118 @@
           float: left;
           padding-left: 10px;
           padding-right: 40px;
-          margin-top: 18px;
+          &-color {
+            text-decoration: none;
+            color: black;
+          }
         }
       }
     }
-
-    &__mid {
-      height: 460px;
-      width: 100%;
+    &__post {
       border-top: $border-line;
-      padding: 30px 0 15px 0;
-      &-left {
-        height: 100%;
-        width: 27.7%;
-        background-color: $colorgray;
-        float: left;
-      }
-      &-mid {
-        height: 100%;
-        width: 44.3%;
-        float: left;
-        background-color: $colorwhite;
-        border: $border-line;
-        overflow: scroll;
-        border-radius: 5px;
+      height: 500px;
+      width: 100%;
+      overflow: scroll;
+      &-text {
+        height: 300px;
+        width: 100%;
+        border-bottom: $border-line;
+        &_text {
+          height: 250px;
+          width: 500px;
+          position: relative;
+          left: 469px;
+          top: 9px;
+          float: left;
+          border: 3px solid $border;
+          border-radius: 4px;
+          &-top {
+            height: 45px;
+            widows: 100%;
+            border-bottom: 1.5px solid $border;
+          }
+          &-mid {
+            height: 158px;
+            width: 100%;
+          }
+          &-bottom {
+            height: 45px;
+            width: 100%;
+            //border-top: 1.5px solid $border;
+          }
+        }
         &_menu {
-          height: 40px;
-          border-bottom: $border-line;
-        }
-        &_post {
-          height: 415px;
-          width: 100%;
-          overflow: scroll;
+          height: 280px;
+          width: 280px;
+          position: relative;
+          left: 510px;
+          top: 9px;
+          float: left;
+          border: 3px solid $border;
+          border-radius: 3px;
+          display: none;
         }
       }
-      &-right {
-        height: 100%;
-        width: 27.6%;
-        background-color: $colorgray;
-        float: right;
+      &-box {
+        height: 500px;
+        width: 100%;
+        border-bottom: $border-line;
+        &_text {
+          height: 300px;
+          width: 280px;
+          float: left;
+          border: 3px solid $border;
+          border-radius: 3px;
+          position: relative;
+          top: 10px;
+          left:147px;
+          display: none;
+        }
+        &_image {
+          height: 450px;
+          width: 500px;
+          float: left;
+          border: 3px solid $border;
+          border-radius: 4px;
+          position: relative;
+          top: 10px;
+          left: 469px;
+          &-top {
+            height: 45px;
+            widows: 100%;
+            border-bottom: 1.5px solid $border;
+          }
+          &-mid {
+            height: 357px;
+            width: 100%;
+          }
+          &-bottom {
+            height: 45px;
+            width: 100%;
+            border-top: 1.5px solid $border;
+          }
+        }
+        &_menu {
+          height: 280px;
+          width: 280px;
+          border: 3px solid $border;
+          border-radius: 3px;
+          float: left;
+          position: relative;
+          top: 10px;
+          left: 224px;
+          display: none;
+        }
       }
     }
   }
 }
 
-.post-box {
-  &__up {
-    height: 52px;
-    width: 100%;
-    border-bottom: $border-line;
-    &-image {
-      height: 47px;
-      width: 47px;
-      border-radius: 50%;
-      margin-top: 1.5px;
-      margin-left: 10px;
-      float: left;
-      border: $border-line;
-    }
-    &-name {
-      height: 52px;
-      float: left;
-      position: relative;
-      left: 10px;
-      &_text {
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        font-size: 25px;
-      }
-    }
-    &-date {
-      height: 52px;
-      width: 160px;
-      float: left;
-      position: relative;
-      left: 100px;
-      &_text {
-        position: absolute;
-        bottom: 0%;
-      }
-    }
-    &-menu {
-      float: left;
-      position: relative;
-      left: 100px;
-      height: 43px;
-      width: 43px;
-      margin-top: 3.5px;
-    }
-  }
-  &__bottom {
-    max-height: 378px;
-    &-image {
-      height: 364px;
-      width: 100%;
-      max-height: 364px;
-      border-bottom: $border-line;
-    }
-  }
-}
+
 
 .up {
   &__name {
-    font-size: 25px;
+    font-size: 30px;
   }
   &__username {
     font-size: 16px;
@@ -218,12 +258,13 @@
   }
 }
 
+
 #info-num {
   text-align: center;
 }
 
 #info-text {
-text-align: center;
+  text-align: center;
 }
 
 #post-box {
