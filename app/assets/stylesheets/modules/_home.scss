@@ -92,6 +92,8 @@
           margin: auto;
           position: relative;
           top: 5px;
+          display: none;
+          //アイコン追加語
         }
       }
       &-info {
@@ -169,7 +171,7 @@
           &-bottom {
             height: 45px;
             width: 100%;
-            border-top: 1.5px solid $border;
+            //border-top: 1.5px solid $border;
           }
         }
         &_menu {
@@ -253,46 +255,6 @@
     width: 100%;
     text-align: center;
     margin-top: 8px;
-  }
-}
-
-.post {
-  &__image {
-    height: 40px;
-    width: 40px;
-    float: left;
-    position: relative;
-    left: 5px;
-    border: $border-line;
-    top: 2px;
-    border-radius: 50%;
-  }
-  &__username {
-    height: 46px;
-    width: 138px;
-    float: left;
-    position: relative;
-    left: 20px;
-    &_text {
-      display: inline-block;
-      font-size: 30px;
-      position: relative;
-      left: 5px;
-      top: 5px;
-    }
-  }
-  &__time {
-    height: 46px;
-    width: 184px;
-    float: left;
-    position: relative;
-    left: 20px;
-    &_text {
-      display: inline-block;
-      font-size: 22px;
-      position: relative;
-      top: 14px;
-    }
   }
 }
 
