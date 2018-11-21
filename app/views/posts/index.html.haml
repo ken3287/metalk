@@ -39,10 +39,11 @@
               %p#info-num
                 = current_user.posts.count
           %li.home-main__user-bottom_box
-            %p#info-text
-              Dairy
-            %p#info-num
-              none
+            = link_to  user_diaries_path(current_user), class: "home-main__user-bottom_box-color" do
+              %p#info-text
+                Dairy
+              %p#info-num
+                none
 
     .home-main__post
       = render partial: 'text'
