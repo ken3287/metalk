@@ -1,4 +1,83 @@
 .diary {
+  &-post {
+    &__form {
+      height: 739px;
+      width: 100%;
+      &__main {
+        height: 600px;
+        width: 600px;
+        position: relative;
+        top: 44.5px;
+        left: 32.6%;
+        border: $border-line;
+        border-radius: 5px;
+        &-title {
+          height: 80px;
+          width: 580px;
+          position: relative;
+          left: 10px;
+          &__name {
+            font-size: 20px;
+            position: relative;
+            top: 3px;
+            left: 3px;
+          }
+          &__field {
+            height: 38px;
+            width: 300px;
+            position: relative;
+            top: 36px;
+            right: 83px;
+            font-size: 20px;
+            border: $border-line;
+            border-radius: 2px;
+          }
+          &__field:focus {
+            outline: none;
+          }
+        }
+        &-sentence {
+          height: 460px;
+          width: 580px;
+          position: relative;
+          left: 10px;
+          &__name {
+            font-size: 20px;
+            position: relative;
+            left: 3px;
+          }
+          &__field {
+            height: 400px;
+            width: 580px;
+            font-size: 16px;
+            position: relative;
+            resize: none;
+            border: $border-line;
+            border-radius: 2px;
+          }
+          &__field:focus {
+            outline: none;
+          }
+        }
+        &-submit {
+          position: relative;
+          left: 430px;
+          &__field {
+            display: inline-block;
+            height: 30px;
+            width: 150px;
+            border-radius: 5px;
+            border: $border-line;
+            transition: .3s;
+          }
+          &__field:hover {
+            background-color: black;
+            color: white;
+          }
+        }
+      }
+    }
+  }
   &__main {
     &-title {
       display: inline-block;
