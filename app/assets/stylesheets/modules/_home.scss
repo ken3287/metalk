@@ -74,6 +74,58 @@
   &-main {
     width: 100%;
     background-color: $colorgray;
+    &__diary {
+      border-top: $border-line;
+      height: 500px;
+      width: 100%;
+      overflow: scroll;
+      &-post {
+        height: 500px;
+        width: 100%;
+        &_text {
+          height: 480px;
+          width: 600px;
+          float: left;
+          position: relative;
+          top: 7px;
+          left: 420px;
+          border: 3px solid $border;
+          border-radius: 5px;
+          &-top {
+            height: 50px;
+            border-bottom: $border-line;
+            &_title {
+              height: 50px;
+              width: 450px;
+              float: left;
+            }
+            &_time {
+              height: 50px;
+              width: 150px;
+              float: left;
+            }
+          }
+          &-mid {
+            height: 380px;
+          }
+          &-btm {
+            height: 50px;
+            border-top: $border-line;
+            display: none;
+          }
+        }
+        &_menu {
+          height: 250px;
+          width: 300px;
+          position: relative;
+          top: 7px;
+          left: 1060px;
+          border: 3px solid $border;
+          border-radius: 5px;
+          display: none;
+        }
+      }
+    }
     &__user {
       height: 238px;
       width: 72%;

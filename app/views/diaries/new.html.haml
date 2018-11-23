@@ -1,0 +1,18 @@
+.home
+  .home__up
+    .home__up_search
+    .home__up_signout
+      = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "home__up_signout__text"
+    .home__up_post
+      = link_to 'ホーム', root_path(current_user.id), method: :get, class: "home__up_post__link"
+  .diary-post__form
+    .diary-post__form__main
+      = form_for @diary, url: user_posts_path(current_user.id) do |f|
+        .diary-post__form__main-title
+          = f.label :title, 'タイトル', class: 'diary-post__form__main-title__name'
+          = f.text_field :title, class: 'diary-post__form__main-title__field',maxlength: "14"
+        .diary-post__form__main-sentence
+          = f.label :sentence, '日記', class: 'diary-post__form__main-sentence__name'
+          = f.text_area :sentence, class: 'diary-post__form__main-sentence__field', maxlength: "400"
+        .diary-post__form__main-submit
+          = f.submit '保存', class: 'diary-post__form__main-submit__field'

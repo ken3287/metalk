@@ -4,7 +4,7 @@
     .home__up_signout
       = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "home__up_signout__text"
     .home__up_post
-      = link_to '投稿', new_user_post_path(current_user.id), method: :get, class: "home__up_post__link"
+      = link_to '日記を書く', new_user_diary_path(current_user.id), method: :get, class: "home__up_post__link"
 
   .home-main
     .home-main__user
@@ -45,5 +45,5 @@
               %p#info-num
                 1
 
-    .home-main__post
-      = render partial: 'text'
+    .home-main__diary
+      = render partial: 'diary'
