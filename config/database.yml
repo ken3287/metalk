@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: metalk_production
-  username: metalk
+  username: root
   password: <%= ENV['METALK_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
