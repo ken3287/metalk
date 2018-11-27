@@ -43,7 +43,7 @@
               %p#info-text
                 Diary
               %p#info-num
-                1
+                = current_user.diaries.count
 
     .home-main__diary
       = render partial: 'diary'
