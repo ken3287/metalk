@@ -9,7 +9,6 @@ class DiariesController < ApplicationController
 
   def create
     Diary.create(diary_params)
-    binding.pry
     redirect_to user_diaries_path
   end
 
