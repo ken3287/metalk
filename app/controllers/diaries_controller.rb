@@ -8,8 +8,13 @@ class DiariesController < ApplicationController
   end
 
   def create
-    Diary.create(diary_params)
-    redirect_to user_diaries_path
+    @diary = Diary.new(diary_params)
+
+      if @diary.save
+        redirect_to user_diaries_path, notice: 'Save a diary'
+      else
+        render :new, notice: 'Can not save'
+      end
   end
 
   private

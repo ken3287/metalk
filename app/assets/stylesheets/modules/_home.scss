@@ -4,13 +4,30 @@
     width: 100%;
     background-color: $colorwhite;
     border-bottom: $border-line;
+    &_notice {
+      display: inline-block;
+      height: 48px;
+      width: 200px;
+      float: left;
+      position: relative;
+      top: 1px;
+      left: 620px;
+      &_text {
+        display: inline-block;
+        text-align: center;
+        height: 48px;
+        width: 200px;
+        font-size: 20px;
+        line-height: 48px;
+      }
+    }
     &_search {
       display: inline-block;
       height: 30px;
       width: 150px;
-      float: right;
+      float: left;
       position: relative;
-      right: 600 - 30px;
+      left: 680px;
       margin-top: 10px;
       border: $border-line;
       border-radius: 2px;
