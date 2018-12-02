@@ -7,43 +7,7 @@
       = link_to '投稿', new_user_post_path(current_user.id), method: :get, class: "home__up_post__link"
 
   .home-main
-    .home-main__user
-      .home-main__user-image
-        .home-main__user-image_box
-      .home-main__user-info
-        .home-main__user-info_name
-          %span.up__name
-            = current_user.name
-        .home-main__user-info_username
-          %span.up__username
-            USERNAME
-        .home-main__user-info_btn
-          %span.up__btn
-            FOLLOW
-      .home-main__user-bottom
-        %ul
-          %li.home-main__user-bottom_box
-            %p#info-text
-              Follow
-            %p#info-num
-              none
-          %li.home-main__user-bottom_box
-            %p#info-text
-              Follower
-            %p#info-num
-              none
-          %li.home-main__user-bottom_box
-            = link_to  user_posts_path(current_user), class: "home-main__user-bottom_box-color" do
-              %p#info-text
-                Post
-              %p#info-num
-                = current_user.posts.count
-          %li.home-main__user-bottom_box
-            = link_to  user_diaries_path(current_user), class: "home-main__user-bottom_box-color" do
-              %p#info-text
-                Diary
-              %p#info-num
-                1
+    = render partial: 'home'
 
     .home-main__post
       = render partial: 'text'

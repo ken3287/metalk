@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = current_user.posts.includes(:user)
   end
 
   def new
