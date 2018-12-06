@@ -12,4 +12,7 @@
         %span.diary__main-text
           = diary.sentence
       .home-main__diary-post_text-btm
+        - if user_signed_in? && current_user.id == diary.user_id
+          .home-main__diary-post_text-btm__delete
+            = link_to '削除', user_diary_path(current_user.id, diary), method: :delete, class: "home-main__diary-post_text-btm__delete-btn",data: {confirm: '本当に削除しますか？'}
     .home-main__diary-post_menu
