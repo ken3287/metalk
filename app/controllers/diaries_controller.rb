@@ -17,6 +17,14 @@ class DiariesController < ApplicationController
       end
   end
 
+
+  def destroy
+    @diary = Diary.find(params[:id])
+      @diary.destroy if @diary.user_id == current_user.id
+      redirect_to user_diaries_path, notice: 'Delete completed'
+
+  end
+
   private
 
   def diary_params
