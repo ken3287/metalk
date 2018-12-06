@@ -24,13 +24,13 @@
         %p#info-num
           none
       %li.home-main__user-bottom_box
-        %p#info-text
-          Post
-        %p#info-num
-          = current_user.posts.count
-      %li.home-main__user-bottom_box
-        = link_to  user_diaries_path(current_user), class: "home-main__user-bottom_box-color" do
+        = link_to  user_posts_path(current_user), class: "home-main__user-bottom_box-color" do
           %p#info-text
-            Diary
+            Post
           %p#info-num
-            = current_user.diaries.count
+            = current_user.posts.count
+      %li.home-main__user-bottom_box
+        %p#info-text
+          Diary
+        %p#info-num
+          = current_user.diaries.count
