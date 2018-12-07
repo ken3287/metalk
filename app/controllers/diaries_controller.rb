@@ -24,6 +24,7 @@ class DiariesController < ApplicationController
         redirect_to user_diaries_path, notice: 'Delete completed'
       else
         redirect_to user_diaries_path, notice: 'Can not delete'
+      end
   end
 
   private
