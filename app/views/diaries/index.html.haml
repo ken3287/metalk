@@ -11,7 +11,7 @@
       = link_to '日記を書く', new_user_diary_path(current_user.id), method: :get, class: "home__up_post__link"
 
   .home-main
-    = render partial: 'posts/home'
+    = render partial: 'home'
 
     .home-main__diary
       = render partial: 'diary'
