@@ -1,5 +1,5 @@
 class DiariesController < ApplicationController
-  before_action :confirm_user, only: [:destroy]
+  before_action :confirm_user, only: [:edit, :update, :destroy]
 
   def index
   end
@@ -19,12 +19,23 @@ class DiariesController < ApplicationController
 
   end
 
+  def edit
+  end
+
+  def update
+    if @diary.update(diary_params)
+      redirect_to user_diaries_path, notice: 'Update completed'
+    else
+      redirect_to user_diaries_path, notice: 'Can not update'
+    end
+  end
+
   def destroy
-      if @diary.destroy
-        redirect_to user_diaries_path, notice: 'Delete completed'
-      else
-        redirect_to user_diaries_path, notice: 'Can not delete'
-      end
+    if @diary.destroy
+      redirect_to user_diaries_path, notice: 'Delete completed'
+    else
+      redirect_to user_diaries_path, notice: 'Can not delete'
+    end
   end
 
   private
@@ -34,9 +45,12 @@ class DiariesController < ApplicationController
   end
 
   def confirm_user
-    @diary = Diary.find(params[:id])
-    unless @diary.user_id == current_user.id
-      redirect_to user_diaries_path, notice: 'You must be logged in'
+    if @diary = Diary.find(params[:id])
+      unless @diary.user_id == current_user.id
+        redirect_to user_diaries_path, notice: 'You must be logged in'
+      end
+    else
+      redirect_to user_diaries_path, notice: 'This diary could not find'
     end
   end
 
