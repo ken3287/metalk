@@ -13,6 +13,8 @@
           = diary.sentence
       .home-main__diary-post_text-btm
         - if user_signed_in? && current_user.id == diary.user_id
+          .home-main__diary-post_text-btm__edit
+            = link_to ' 編集', edit_user_diary_path(current_user.id, diary), class: "home-main__diary-post_text-btm__edit-btn"
           .home-main__diary-post_text-btm__delete
             = link_to '削除', user_diary_path(current_user.id, diary), method: :delete, class: "home-main__diary-post_text-btm__delete-btn",data: {confirm: '本当に削除しますか？'}
     .home-main__diary-post_menu
