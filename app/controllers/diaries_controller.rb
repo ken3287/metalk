@@ -22,6 +22,14 @@ class DiariesController < ApplicationController
   def edit
   end
 
+  def update
+    if @diary.update(diary_params)
+      redirect_to user_diaries_path, notice: 'Update completed'
+    else
+      redirect_to user_diaries_path, notice: 'Can not update'
+    end
+  end
+
   def destroy
     if @diary.destroy
       redirect_to user_diaries_path, notice: 'Delete completed'
