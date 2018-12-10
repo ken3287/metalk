@@ -298,9 +298,34 @@
             width: 100%;
           }
           &-bottom {
-            height: 45px;
+            background-color: $colorwhite;
+            height: 44px;
             width: 100%;
-            //border-top: 1.5px solid $border;
+            border-top: 1.5px solid $border;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            &__delete {
+              position: relative;
+              left: 350px;
+              top: 6px;
+              &-btn {
+                display: inline-block;
+                height: 30px;
+                width: 130px;
+                text-align:center;
+                line-height: 30px;
+                text-decoration: none;
+                color: black;
+                border-radius: 5px;
+                border: $border-line;
+                transition: .3s;
+                // ボタンはこれをベースに作成
+              }
+              &-btn:hover {
+                color: $colorwhite;
+                background-color: black;
+              }
+            }
           }
         }
         &_menu {
