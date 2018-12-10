@@ -1,5 +1,9 @@
 .home
   .home__up
+    .home__up_notice
+      .home__up_notice_box
+        - flash.each do |key, value|
+          = content_tag :div, value, class: 'home__up_notice_text'
     .home__up_search
     .home__up_signout
       = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "home__up_signout__text"
