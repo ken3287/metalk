@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :confirm_user, only: [:destroy]
+  before_action :confirm_user, only: [:edit, :update, :destroy]
 
   def index
   end
@@ -11,6 +11,14 @@ class PostsController < ApplicationController
   def create
     Post.create(post_params)
     redirect_to root_path
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to user_posts_path, notice: 'Update completed'
+    else
+      redirect_to user_posts_path, notice: 'Can not update'
+    end
   end
 
   def destroy
