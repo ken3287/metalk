@@ -14,7 +14,9 @@
           %span.post__main_text
             = post.body
       .home-main__post-text_text-bottom
-        .home-main__post-text_text-bottom__delete
-          - if user_signed_in? && current_user.id == post.user_id
+        - if user_signed_in? && current_user.id == post.user_id
+          .home-main__post-text_text-bottom__edit
+            = link_to '編集', edit_user_post_path(current_user.id, post), class: "home-main__post-text_text-bottom__edit-btn"
+          .home-main__post-text_text-bottom__delete
             = link_to '削除', user_post_path(current_user.id, post), method: :delete, class: "home-main__post-text_text-bottom__delete-btn",data: {confirm: '本当に削除しますか？'}
     .home-main__post-text_menu
