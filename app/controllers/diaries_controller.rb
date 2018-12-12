@@ -19,9 +19,6 @@ class DiariesController < ApplicationController
 
   end
 
-  def edit
-  end
-
   def update
     if @diary.update(diary_params)
       redirect_to user_diaries_path, notice: 'Update completed'

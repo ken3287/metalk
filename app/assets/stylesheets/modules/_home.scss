@@ -304,10 +304,33 @@
             border-top: 1.5px solid $border;
             border-bottom-right-radius: 5px;
             border-bottom-left-radius: 5px;
-            &__delete {
+            &__edit {
+              float: left;
               position: relative;
-              left: 350px;
-              top: 6px;
+              top: 7px;
+              left: 210px;
+              &-btn {
+                display: inline-block;
+                height: 30px;
+                width: 130px;
+                text-align:center;
+                line-height: 30px;
+                text-decoration: none;
+                color: black;
+                border-radius: 5px;
+                border: $border-line;
+                transition: .3s;
+              }
+              &-btn:hover {
+                color: $colorwhite;
+                background-color: black;
+              }
+            }
+            &__delete {
+              float: left;
+              position: relative;
+              top: 7px;
+              left: 220px;
               &-btn {
                 display: inline-block;
                 height: 30px;
