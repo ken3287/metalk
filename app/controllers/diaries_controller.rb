@@ -1,7 +1,9 @@
 class DiariesController < ApplicationController
-  before_action :confirm_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :update, :destory]
+  before_action :confirm_user, only: [:new, :edit, :update, :destroy]
 
   def index
+    @user = User.find_by(id: params[:user_id])
   end
 
   def new
