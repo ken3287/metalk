@@ -5,6 +5,8 @@
     .home-main__user-info_name
       %span.up__name
         = current_user.name
+    .home-main__user-info_edit
+      = link_to '編集', edit_user_path(current_user.id), class: "home-main__user-info_edit-btn"
     .home-main__user-info_username
       %span.up__username
         USERNAME
@@ -24,7 +26,7 @@
         %p#info-num
           none
       %li.home-main__user-bottom_box
-        = link_to  user_posts_path(current_user), class: "home-main__user-bottom_box-color" do
+        = link_to user_posts_path(current_user), class: "home-main__user-bottom_box-color" do
           %p#info-text
             Post
           %p#info-num

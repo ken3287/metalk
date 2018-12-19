@@ -230,11 +230,30 @@
         width: 70%;
         float: left;
         &_name {
+          float: left;
           height: 50px;
-          width: 300px;
+          max-width: 300px;
           position: relative;
           left: 12px;
           top: 12px;
+        }
+        &_edit {
+          float: left;
+          position: relative;
+          left: 32px;
+          top: 18px;
+          &-btn {
+            display: inline-block;
+            height: 30px;
+            width: 130px;
+            text-align:center;
+            line-height: 30px;
+            text-decoration: none;
+            color: black;
+            border-radius: 5px;
+            border: $border-line;
+            transition: .3s;
+          }
         }
         &_username {
           height: 30px;
