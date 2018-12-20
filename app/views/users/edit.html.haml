@@ -1,6 +1,5 @@
 .account
-  - flash.each do |key, value|
-    = content_tag :div, value, class: 'home__up_notice_text'
+  = render 'layouts/notice'
   .account-top
     .account-top__application-name MeTALK
   .account-edit
@@ -11,7 +10,7 @@
       .account-main__avatar
         = f.label :avatar, class: 'account-main__avatar-field' do
           = f.file_field :avatar, class: 'account-main__avatar-field_main'
-          = image_tag @use.avatar, class: 'account-main__avatar-field'
+          = image_tag @user.avatar, class: 'account-main__avatar-field'
       .account-main__username
         = f.text_field :name, autofocus: true, placeholder: 'ニックネーム', type: 'text', class: 'field'
       .account-main__email
