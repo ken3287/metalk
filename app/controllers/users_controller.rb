@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :confirm_user, only: [:edit, :update]
 
   def index
-    @user = User.find_by(id: params[:id])
+    @user = User.find(id: params[:id])
   end
 
   def edit
