@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    unless @user.update(user_params)
+    if @user.update(user_params)
       redirect_to user_diaries_path(current_user.id)
     else
       redirect_to edit_user_path(current_user.id), notice: '編集できませんでした'
