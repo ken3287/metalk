@@ -1,14 +1,16 @@
-.account-page
-  .account-page__login
-    = render "devise/shared/links"
-  .account-page__main
-    %h2.account-page__main-name ログイン
+.account
+  .account-top
+    .account-top__application-name MeTALK
+    .account-top__sign-in
+      = link_to "アカウント作成", new_registration_path(resource_name), class: 'account-top__sign-in--btn'
+  .account-main
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-      .field
-        .field-input
-          = f.email_field :email, placeholder: 'メールアドレス', autofocus: true, autocomplete: "email", class: 'field-input'
-      .field
-        .field-input
-          = f.password_field :password, placeholder: 'メールアドレス', autocomplete: "current-password", class: 'field-input'
-      .actions
-        = f.submit "ログイン", class: 'account-submit'
+      .account-main__title
+        %p.account-main__title_size
+          ログインする
+      .account-main__email
+        = f.email_field :email, placeholder: 'メールアドレス', autofocus: true, autocomplete: "email", class: 'field'
+      .account-main__password
+        = f.password_field :password, placeholder: 'パスワード', autocomplete: "current-password", class: 'field'
+      .account-main__submit
+        = f.submit "ログイン", class: 'account-main__submit-btn'

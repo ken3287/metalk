@@ -1,4 +1,5 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!
   before_action :confirm_user, only: [:edit, :update, :destroy]
 
   def index
@@ -42,12 +43,9 @@ class DiariesController < ApplicationController
   end
 
   def confirm_user
-    if @diary = Diary.find(params[:id])
-      unless @diary.user_id == current_user.id
-        redirect_to user_diaries_path, notice: 'You must be logged in'
-      end
-    else
-      redirect_to user_diaries_path, notice: 'This diary could not find'
+    @diary = current_user.diaries.find(params[:id])
+    unless @diary.user_id == current_user.id
+      redirect_to user_diaries_path, notice: 'You must be logged in'
     end
   end
 

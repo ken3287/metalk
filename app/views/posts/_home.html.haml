@@ -1,10 +1,12 @@
 .home-main__user
   .home-main__user-image
-    .home-main__user-image_box
+    = image_tag current_user.avatar, class: 'home-main__user-image_box'
   .home-main__user-info
     .home-main__user-info_name
       %span.up__name
         = current_user.name
+    .home-main__user-info_edit
+      = link_to '編集', edit_user_path(current_user.id), class: "home-main__user-info_edit-btn"
     .home-main__user-info_username
       %span.up__username
         USERNAME
